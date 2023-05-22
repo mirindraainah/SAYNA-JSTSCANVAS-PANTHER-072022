@@ -110,7 +110,7 @@ header nav {
 }
 
 .logo img:hover {
-    filter: invert(20%);
+    filter: invert(30%);
     cursor: pointer;
 }
 
@@ -226,10 +226,10 @@ footer .footer-left:hover, footer div ul li:hover{
     transform: scale(1.1);
 }
 
-/* section * {
+section * {
     animation-name: fade-in;
     animation-duration: 5s;
-} */
+}
 
 @keyframes fade-in {
     from {

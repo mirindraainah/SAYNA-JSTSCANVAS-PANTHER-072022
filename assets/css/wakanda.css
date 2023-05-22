@@ -13,9 +13,9 @@
 /**************** PREMIERE SECTION ********************/
 .first-section {
     background-image: url('../images/Wakanda/Pantherwakanda1.png');
-    background-size: contain;
+    background-size: 110vw;
     background-position: center;
-    margin-top: -3%;
+    margin-top: 1%;
     height: 50vw;
 }
 
@@ -41,7 +41,7 @@
     background-image: url(../images/Wakanda/Pantherwakanda2.png);
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: -8%;
+    margin-top: -5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8em;

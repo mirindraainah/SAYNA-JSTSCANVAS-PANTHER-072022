@@ -50,6 +50,10 @@
     width: 16px;
 }
 
+.icons li:hover {
+    filter: brightness(0) saturate(100%) invert(100%) grayscale(100%) contrast(200%);
+}
+
 /************************ PREMIERE SECTION *****************************/
 .first-section {
     display: grid;
