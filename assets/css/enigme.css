@@ -1,0 +1,155 @@
+/* Couleurs */
+:root {
+    --white-color: #ffffff;
+    --purple-color: #9E91B7;
+    --purple-color2: #3D2DA6;
+    --blue-color: #07338C;
+    --blue-color2: #021740;
+    --pink-color: #F2CEF2;
+    --pink-color2: #DF99F2;
+    --black-color: #000;
+}
+
+/*********************** PREMIERE SECTION ****************************/
+.first-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+    font-family: beyno;
+    color: var(--purple-color);
+    font-size: 3.5vw;
+}
+
+/* partie gauche */
+.left {
+    margin: -18% auto auto -5%;
+}
+
+.left img {
+    width: 75vw;
+}
+
+/* partie droite */
+.right {
+   margin: 18% auto auto -48%;
+}
+
+.right .pantherenigme2{
+    margin: -2% auto -6% -4%;
+}
+
+.pantherenigme2 {
+    position: relative;
+}
+
+.right .pantherenigme2 img{
+    width: 40vw;
+}
+
+.pantherenigme2-text {
+    position: absolute;
+    top: 8vw;
+    left: 7vw;
+    width: 28vw;
+    text-align: justify;
+    word-spacing: -0.5px;
+}
+
+.line img {
+    width: 45vw;
+    height: 0.6vh;
+}
+
+/*********************** DEUXIEME SECTION ****************************/
+.second-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.second-section .words {
+    grid-column: span 2;
+}
+
+.second-section h2 {
+    font-family: wakanda;
+    color: var(--purple-color);
+    font-size: 1.7vw;
+    letter-spacing: 3px;
+    word-spacing: 0.8em;
+    line-height: 1.6;
+}
+
+/* Partie gauche */
+.alphabet {
+    margin-top: 8%;
+    margin-bottom: 25%;
+}
+.left2 .p1{
+    line-height: 3;
+}
+.alphabet .p2 {
+    font-family: wakanda;
+    font-size: 1em;
+}
+
+.alphabet span {
+    font-family: cantarell;
+    font-size: 1em;
+}
+
+.formulaire form{
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+    width: 95%;
+}
+
+form input {
+    width: 100%;
+    height: 3vw;
+    border-radius: 38px;
+    border: 1px solid var(--purple-color);
+    background: transparent;
+    padding-left: 3%;
+}
+
+input::placeholder {
+    color: var(--purple-color); 
+    font-size: 1vw;
+    font-family: cantarell;
+}
+
+form button{
+    width: 10vw;
+    padding: 2.5% 3%;
+    border-radius: 38px;
+    background-color: var(--pink-color);
+    border: none;
+    margin: 0 auto;
+    color: var(--blue-color2);
+    font-family: cantarell;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Partie droite */
+.right2 {
+    margin-left: 15%;
+    position: relative;
+}
+
+.right2 img {
+    width: 40vw;
+}
+
+.right2 .pantherenigme2-text2 {
+    position: absolute;
+    width: 30vw;
+    bottom: 15vw;
+    left: 5vw;
+    text-align: center;
+}

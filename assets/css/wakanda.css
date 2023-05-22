@@ -1,0 +1,75 @@
+/* Coleurs */
+:root {
+    --white-color: #ffffff;
+    --purple-color: #9E91B7;
+    --purple-color2: #3D2DA6;
+    --blue-color: #07338C;
+    --blue-color2: #021740;
+    --pink-color: #F2CEF2;
+    --pink-color2: #DF99F2;
+    --black-color: #000;
+}
+
+/**************** PREMIERE SECTION ********************/
+.first-section {
+    background-image: url('../images/Wakanda/Pantherwakanda1.png');
+    background-size: contain;
+    background-position: center;
+    margin-top: -3%;
+    height: 50vw;
+}
+
+.wf {
+    width: 40vw;
+    padding-top: 15%;
+    margin-left: 10%;
+}
+
+.wf p {
+    width: 25vw;
+    margin-top: 2.5em;
+}
+
+.first-section h1 {
+    font-family: beyno;
+    color: var(--purple-color);
+    font-size: 3.7vw;
+}
+
+/**************** PREMIERE SECTION ********************/
+.second-section {
+    background-image: url(../images/Wakanda/Pantherwakanda2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8em;
+    width: 80vw;
+    position: relative;
+    right: 10%;
+    left: 10%;
+    padding-top: 13%;
+    z-index: -1;
+}
+
+.second-section h2 {
+    margin: 1em 0 1em 0;
+}
+
+/* partie gauche */
+.video{
+    background-color: var(--purple-color2);
+    width: 35vw;
+    height: 15vw;
+    margin: 4.5em 0 4.5em 0;
+    padding: 10%;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+/* partie droite */
+.pantherwakanda2-1 img{
+    width: 35vw;
+    margin-top: 4em;
+}

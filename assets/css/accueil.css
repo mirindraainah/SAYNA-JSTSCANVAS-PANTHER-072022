@@ -1,0 +1,274 @@
+/* Couleurs */
+:root {
+    --white-color: #ffffff;
+    --purple-color: #9E91B7;
+    --purple-color2: #3D2DA6;
+    --blue-color: #07338C;
+    --blue-color2: #021740;
+    --pink-color: #F2CEF2;
+    --pink-color2: #DF99F2;
+    --black-color: #000;
+}
+
+/********* Contacts ****************/
+.left{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 1vw;
+    position: absolute;
+    top:  0;
+    left: 3vw;
+    display: grid;
+    position: fixed;
+}
+
+.vertical-line1 {
+    border-left: 3px solid var(--purple-color);
+    min-height: 29vw;
+}
+
+.vertical-line2 {
+    border-left: 3px solid var(--purple-color); 
+    height: 19.1vw;
+}
+
+.vertical-icon {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-left: 14px;
+}
+
+.vertical-icon .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    list-style-type: none;
+    margin-left: -7px;
+}
+
+.vertical-icon .icons img {
+    width: 16px;
+}
+
+/************************ PREMIERE SECTION *****************************/
+.first-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10% 12%;
+    height: 30vw;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.bp h1{
+    line-height: 0.5;
+}
+.bp h2 {
+    line-height: 3;
+}
+
+.first-section p {
+    width: 32vw;
+    text-align: justify;
+}
+
+.first-section a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.first-section img {
+    width: 62.5vw;
+    margin: -15% auto auto -5%;
+}
+
+/************************ DEUXIEME SECTION *****************************/
+.second-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.7fr 8fr;
+}
+
+.second-section .persona {
+    display: grid;
+    grid-template-columns: 4fr 4fr 3fr 4fr 2fr;
+    background-color: var(--blue-color2);
+    height: 17.8vw;
+    width: 100%;
+    padding-left: 2%;
+}
+
+.second-section .persona .killmongerImg img {
+    width: 100%;
+    margin-top: -15%;
+}
+
+.second-section .persona .killmonger {
+    padding: 10% 5% 0 5%;
+}
+
+.second-section .persona .okoyeImg img {
+    width: 100%;
+}
+
+.second-section .persona .okoye {
+    padding: 10% 5% 0 5%;
+}
+
+.second-section .persona .unknown {
+    position: relative;
+}
+
+.second-section .persona .unknown a {
+    background-color: var(--blue-color2);
+    padding: 10% 15%;
+    text-decoration: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 25%;
+    top: 28%;
+}
+
+.second-section .persona .unknown img {
+    width: 110%;
+}
+
+/************************ TROISIEME SECTION *****************************/
+.third-section {
+    padding: 12% 10% 5% 8%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 50vw 8vw 25vw 3vw;
+}
+
+/* partie gauche */
+.part-left {
+    padding-left: 9%;
+}
+
+/* partie droite */
+.part-right {
+    display: grid;
+    grid-column:  3/4;
+    margin-top: 35%;
+}
+
+.part-right .tchalla {
+    background-color: var(--white-color);
+    opacity: 0.9;
+    border-radius: 1em;
+    grid-row: 2;
+    width: 25vw;
+    height: 45vw;
+    text-align: center;
+    color: var(--blue-color2);
+    box-shadow: 0px 4px 8px 0px var(--black-color);
+}
+
+.part-right .tchalla img {
+    margin-top: -60%;
+    width: 80%;
+}
+
+.part-right .tchalla .btn-group {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+.part-right .tchalla .btn-group button {
+    background-color: var(--purple-color2);
+    color: var(--white-color);
+    border-radius: 3px;
+    padding: 2% 4%;
+    border: none;
+    font-size: 0.75em;
+    margin: 5% 0;
+}
+
+.part-right .tchalla .description {
+    padding: 0 10%;
+    text-align: left;
+    line-height: 2;
+}
+
+.part-right .pantherhome6 {
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+}
+
+.part-right .pantherhome6 img {
+    margin-left: -10%;
+    width: 30vw;
+}
+
+/***************** FORMULAIRE *****************/
+.fourth-content{
+    background-image: url(../images/Accueil/Pantherhome7.png);
+    background-size: contain;
+    padding-top: 15%;
+    padding-bottom: 2%;
+}
+
+.formulaire {
+    width: 50vw;
+    height: 35vw;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff70 90.43%);
+    border-radius: 15%;
+    padding: 5%;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.formulaire p {
+    color: var(--blue-color2);
+    font-size: 1em;
+}
+
+.formulaire h2 {
+    font-family: cantarell;
+    color: var(--blue-color2);
+    font-size: 2em;
+    margin-bottom: 5%;
+    font-weight: bolder;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form input {
+    width: 80%;
+    height: 3vw;
+    border-radius: 3em;
+    border: 1px solid var(--blue-color2);
+    background: transparent;
+    padding-left: 3%;
+    margin: 0 auto;
+}
+
+input::placeholder {
+    color: var(--blue-color2); 
+    font-size: 1vw;
+}
+
+form button{
+    width: 10vw;
+    padding: 2% 3%;
+    font-size: 1em;
+    border-radius: 3em;
+    background-color: var(--pink-color);
+    border: none;
+    margin: 0 auto;
+    color: var(--blue-color2);
+    font-family: cantarell;
+    font-weight: bold;
+}
+

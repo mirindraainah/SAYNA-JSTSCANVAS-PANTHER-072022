@@ -1,0 +1,279 @@
+/* Style général */
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white-color: #ffffff;
+    --purple-color: #9E91B7;
+    --purple-color2: #3D2DA6;
+    --blue-color: #07338C;
+    --blue-color2: #021740;
+    --pink-color: #F2CEF2;
+    --pink-color2: #DF99F2;
+    --black-color: #000;
+}
+
+@font-face {
+    font-family: panthera;
+    src: url(../fonts/PantheraRegular-MVZ9J.ttf);
+}
+
+@font-face {
+    font-family: beyno;
+    src: url(../fonts/BEYNO.ttf);
+}
+
+@font-face {
+    font-family: wakanda;
+    src: url(../fonts/WakandaForever-Regular.ttf);
+}
+
+@font-face {
+    font-family: cantarell;
+    src: url(../fonts/Cantarell-Regular.ttf);
+}
+
+html {
+    text-align: justify;
+    font-size: 1vw;
+}
+
+body {
+    background-image: url('../images/All pages/arrière_plan.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Cantarell';
+    color: var(--white-color);
+    overflow-x: hidden;
+}
+
+/* TEXTES ET TITRES */
+h1 {
+    font-family: panthera;
+    color: var(--purple-color);
+    font-size: 3.2em;
+}
+
+h2 {
+    font-family: beyno;
+    color: var(--purple-color);
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+.wakanda{
+    font-family: wakanda;
+    font-size: 2em;
+    letter-spacing: 0.15em;
+}
+
+h3 {
+    font-family: 'Cantarell';
+    font-size: 2em;
+}
+
+.title {
+    font-size: 1.5em;
+}
+
+.bio {
+    font-family: cantarell;
+    font-size: 0.87em;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+a {
+    text-decoration: none; 
+    color: var(--white-color);
+    font-size: 0.9em;
+}
+
+/****************** NAV *****************/
+header {
+    padding: 2% 8%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; 
+    font-size: 1.1em;
+}
+
+.logo img {
+    width: 8vw;
+}
+
+.logo img:hover {
+    filter: invert(20%);
+    cursor: pointer;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw; 
+}
+
+ul li {
+    list-style-type: none; 
+}
+
+nav ul li {
+    display: inline-flex;
+}
+
+nav ul li a {
+    list-style-type: none;
+    font-family: beyno;
+    color: var(--white-color);
+}
+
+ul li .active {
+    text-decoration: underline;
+    color: var(--purple-color);
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* formulaires */
+input {
+    color: var(--white-color);
+}
+
+/* PIED DE PAGE */
+footer {
+    background-image: url(../images/All\ pages/back_footer.png);
+    background-position: center;
+    padding-top: 8%;
+    padding-bottom: 4.5%;
+    margin-top: 12%;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+}
+
+/* partie gauche */
+.footer-left {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4.5%;
+}
+
+.footer-left .img1 {
+    position: relative;
+    margin-right: 10%;
+}
+
+.footer-left .img1 img{
+    width: 18vw;
+}
+
+.footer-left .img2 {
+   position: absolute;
+   top: 8vw;
+   left: 4.5vw;
+}
+
+.footer-left .img2 img {
+    width: 8vw;
+}
+
+/* partie droite */
+.footer-right {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+} 
+
+footer h4 {
+    font-family: cantarell;
+    word-spacing: 1em;
+    letter-spacing: 5px;
+    line-height: 5;
+}
+
+footer p {
+    line-height: 2;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    display: flex;
+    gap: 8%;
+}
+
+.footer-right ul img {
+    width: 2.5vw;
+}
+
+.copyright {
+    grid-column: span 2;
+}
+
+/* Effets supplémentaires */
+button[type='submit']:hover {
+    box-shadow: 0px 4px 8px 0px var(--pink-color);
+    cursor: pointer;
+}
+
+footer .footer-left:hover, footer div ul li:hover{
+    transform: scale(1.1);
+}
+
+/* section * {
+    animation-name: fade-in;
+    animation-duration: 5s;
+} */
+
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0px); 
+    }
+}
+
+/* modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+background: linear-gradient(#021740, #021740b7);
+margin: 15% auto;
+padding: 20px;
+width: 50%;
+border-radius: 5%;
+}
+
+/* pour fermer le modal */
+.close {
+color: #aaa;
+float: right;
+font-size: 1.5vw;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+color: var(--white-color);
+text-decoration: none;
+}
