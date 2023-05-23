@@ -10,7 +10,7 @@
     --black-color: #000;
 }
 
-/********* Contacts ****************/
+/************* Contacts et lignes verticales ****************/
 .left{
     display: grid;
     grid-template-columns: auto 1fr;
@@ -64,9 +64,10 @@
     margin-bottom: 10%;
 }
 
-.bp h1{
+.bp h1 {
     line-height: 0.5;
 }
+
 .bp h2 {
     line-height: 3;
 }
@@ -97,7 +98,7 @@
     display: grid;
     grid-template-columns: 4fr 4fr 3fr 4fr 2fr;
     background-color: var(--blue-color2);
-    height: 17.8vw;
+    height: 17.9vw;
     width: 100%;
     padding-left: 2%;
 }
@@ -131,6 +132,8 @@
     position: absolute;
     right: 25%;
     top: 28%;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .second-section .persona .unknown img {
@@ -150,6 +153,10 @@
 /* partie gauche */
 .part-left {
     padding-left: 9%;
+}
+
+.part-left span {
+    font-size: 0.9em;
 }
 
 /* partie droite */
@@ -206,23 +213,22 @@
 }
 
 .part-right .pantherhome6 img {
-    margin-left: -10%;
-    width: 30vw;
+    width: 26vw;
 }
 
-/***************** FORMULAIRE *****************/
-.fourth-content{
+/***************** QUATRIEME SECTION (FORMULAIRE) *****************/
+.fourth-section{
     background-image: url(../images/Accueil/Pantherhome7.png);
-    background-size: contain;
-    padding-top: 15%;
-    padding-bottom: 2%;
+    background-size: 100vw;
+    padding-top: 10%;
+    padding-bottom: 2.5%;
 }
 
 .formulaire {
     width: 50vw;
-    height: 35vw;
-    background: linear-gradient(180deg, #ffffff 0%, #ffffff70 90.43%);
-    border-radius: 15%;
+    height: 36vw;
+    background: linear-gradient(180deg, #ffffff 20%, #ffffff27 80.43%);
+    border-radius: 25%;
     padding: 5%;
     line-height: 1.8;
     text-align: center;
@@ -248,25 +254,29 @@ form {
     gap: 1em;
 }
 
-form input {
+form input, textarea {
     width: 80%;
     height: 3vw;
     border-radius: 3em;
     border: 1px solid var(--blue-color2);
     background: transparent;
-    padding-left: 3%;
     margin: 0 auto;
+    resize: none;
+    padding-left: 5%;
+    color: var(--black-color);
+    font-size: 1em;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
     color: var(--blue-color2); 
+    font-family: cantarell;
     font-size: 1vw;
 }
 
 form button{
     width: 10vw;
-    padding: 2% 3%;
-    font-size: 1em;
+    padding: 2% 2.5%;
+    font-size: 0.8em;
     border-radius: 3em;
     background-color: var(--pink-color);
     border: none;
@@ -274,5 +284,19 @@ form button{
     color: var(--blue-color2);
     font-family: cantarell;
     font-weight: bold;
+}
+
+button[type='submit']:hover {
+    box-shadow: 0px 0px 4px 4px var(--blue-color2);
+    cursor: pointer;
+}
+
+/***************** CINQUIEME SECTION (ROND BLEU) *****************/
+.fifth-section {
+    background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64,
+    0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);
+    margin-bottom: -12%;
+    height: 12vw;
+    padding: 2% 0 0 85%;
 }
 

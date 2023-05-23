@@ -7,9 +7,11 @@ modal.style.display = "none";
 // Réinitialisation des champs
 function resetInputs() {
 var inputs = document.getElementsByTagName('input');
+var textareas = document.getElementsByTagName('textarea');
 for (var i = 0; i < inputs.length; i++) {
     inputs[i].value = '';
 }
+textareas.value = '';
 }
 
 // Événement qui se déclenche lorsque la page est réactualisée

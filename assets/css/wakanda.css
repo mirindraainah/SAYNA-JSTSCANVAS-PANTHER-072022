@@ -15,7 +15,6 @@
     background-image: url('../images/Wakanda/Pantherwakanda1.png');
     background-size: 110vw;
     background-position: center;
-    margin-top: 1%;
     height: 50vw;
 }
 
@@ -58,14 +57,10 @@
 }
 
 /* partie gauche */
-.video{
-    background-color: var(--purple-color2);
+.video iframe{
     width: 35vw;
     height: 15vw;
-    margin: 4.5em 0 4.5em 0;
-    padding: 10%;
-    font-size: 1.2em;
-    line-height: 2em;
+    margin: 3em 0 3em 0;
 }
 
 /* partie droite */
