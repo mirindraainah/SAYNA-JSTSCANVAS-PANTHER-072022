@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enigme</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/enigme.css">
 </head>
@@ -50,10 +51,12 @@
                         <p>Les Dora Milaje sont de farouches guerrières d’élite. Elles constituent la garde 
                             rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la 
                             vie. Leur Générale, Okoyé est également la dirigeante des forces armées et des 
-                            renseignements wakandais. <br>
+                            renseignements wakandais. <br><br>
                             
-                            Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais, 
-                            et apprend par la même occasion la première valeur d’une Dora Milaje!</p>
+                            La réussite de cette évaluation ne dépend pas de la chance mais bel et bien de 
+                            l’entrainement que tu as suivi jusqu’ici ainsi que de ta détermination. Relève ce défi et 
+                            montre nous que tu es capable de porter les valeurs du Black Panther et du Wakanda!</p>
+                        <img src="assets/images/Enigme/Pantherenigme4.png" alt="" id="p4">
                     </div>
                 </div>
                 <div class="line">
@@ -80,9 +83,9 @@
                 </div>
                 <div class="formulaire">
                     <p class="p1">Alors, as tu la réponse </p>
-                    <form action="">
-                        <input type="text" name="" id="" placeholder="Réponse" required>
-                        <button type="submit">ENVOYER</button>
+                    <form action="" id="result">
+                        <input type="text" name="response" id="" placeholder="Réponse" required>
+                        <button type="submit" id="send">ENVOYER</button>
                     </form>
                 </div>
             </div>
@@ -140,5 +143,6 @@
         </div>
     </div>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/enigme.js"></script>
 </body>
 </html>

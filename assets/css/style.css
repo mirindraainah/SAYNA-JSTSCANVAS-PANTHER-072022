@@ -224,10 +224,10 @@ footer .footer-left:hover, footer div ul li:hover{
 }
 
 /* entrée de certains éléments */
-section * {
+/* section * {
     animation-name: fade-in;
     animation-duration: 5s;
-}
+} */
 
 @keyframes fade-in {
     from {

@@ -37,7 +37,7 @@ h1 {
 }
 
 .right .pantherenigme2{
-    margin: -2% auto -6% -4%;
+    margin: -5% auto -6% -4%;
 }
 
 .pantherenigme2 {
@@ -46,20 +46,35 @@ h1 {
 
 .right .pantherenigme2 img{
     width: 40vw;
+    height: 40vw;
 }
 
 .pantherenigme2-text {
     position: absolute;
-    top: 8vw;
+    top: 15vw;
     left: 7vw;
     width: 28vw;
     text-align: justify;
     word-spacing: -0.5px;
 }
 
+.line{
+    position: relative;
+    top: -10vw;
+}
+
 .line img {
     width: 45vw;
     height: 0.6vh;
+}
+
+/* texte et image ajoutés */
+#p4 {
+    width: 2.5vw;
+    height: auto;
+    position: absolute;
+    left: 10vw;
+    margin-top: 1vw;
 }
 
 /*********************** DEUXIEME SECTION ****************************/

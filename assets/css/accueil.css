@@ -98,47 +98,55 @@
     display: grid;
     grid-template-columns: 4fr 4fr 3fr 4fr 2fr;
     background-color: var(--blue-color2);
-    height: 17.9vw;
+    height: 18vw;
     width: 100%;
     padding-left: 2%;
 }
 
-.second-section .persona .killmongerImg img {
+.second-section .persona .divImg1 img {
     width: 100%;
     margin-top: -15%;
 }
 
-.second-section .persona .killmonger {
+.second-section .persona .div1 {
     padding: 10% 5% 0 5%;
 }
 
-.second-section .persona .okoyeImg img {
+.second-section .persona .divImg2 img {
     width: 100%;
 }
 
-.second-section .persona .okoye {
+.second-section .persona .div2 {
     padding: 10% 5% 0 5%;
 }
 
-.second-section .persona .unknown {
+.second-section .persona .divImg3 {
     position: relative;
 }
 
-.second-section .persona .unknown a {
+.second-section .persona .divImg3 button {
     background-color: var(--blue-color2);
     padding: 10% 15%;
-    text-decoration: none;
+    border: none;
     border-radius: 50%;
     position: absolute;
     right: 25%;
     top: 28%;
     font-weight: bold;
     font-size: 1em;
+    color: white;
 }
 
-.second-section .persona .unknown img {
-    width: 110%;
+.second-section .persona .divImg3 img {
+    width: 149%;
 }
+
+/* animation du slider */
+/* #myDiv {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+} */
+  
 
 /************************ TROISIEME SECTION *****************************/
 .third-section {

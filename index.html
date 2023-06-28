@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/accueil.css">
 </head>
@@ -88,30 +89,30 @@
         <!-------------------- Deuxième section ------------------------->
         <section class="second-section">
             <div></div>
-            <div class="persona">
-                <div class="killmongerImg">
-                    <img src="./assets/images/accueil/Pantherhome2.png" alt="Killmonger">
+            <div class="persona" id="myDiv">
+                <div class="divImg1 slide">
+                    <img src="./assets/images/Accueil/Pantherhome_slider_1.png" alt="Killmonger" id="divImg1">
                 </div>
-                <div class="killmonger">
-                    <h2 class="title">KILLMONGER</h2>
+                <div class="div1 slide">
+                    <h2 class="title" id="divTitle1">KILLMONGER</h2>
                     <p class="bio">
                         La sauvagerie de N'Jadaka alors qu'il servait dans une unité d'opérations noires de l'armée américaine lui a valu le surnom de Killmonger. D’origine Wakandaise, et se sentant abandoné par sa nation, il cherche à détroner T’Challa dans une quête vers le pourvoir.
                     </p>
                     <a style="text-decoration: underline;" href="">Voir plus ></a>
                 </div>
-                <div class="okoyeImg">
-                    <img src="./assets/images/accueil/Pantherhome3.png" alt="Okoye">
+                <div class="divImg2 slide">
+                    <img src="./assets/images/accueil/Pantherhome_slider_2.png" alt="Okoye" id="divImg2">
                 </div>
-                <div class="okoye">
-                    <h2 class="title">OKOYE</h2>
+                <div class="div2 slide">
+                    <h2 class="title" id="divTitle2">OKOYE</h2>
                     <p class="bio">
                         Okoye est le général des Dora Milaje (groupe d’élite de femmes guerrières) et le chef des forces armées et des renseignements wakandais. Témoin du couronnement de T'Challa, elle se joint à lui dans de nombreuses aventures
                     </p>
                     <a style="text-decoration: underline;" href="">Voir plus ></a>
                 </div>
-                <div class="unknown">
-                    <img src="./assets/images/accueil/Pantherhome4.png" alt="Pantherhome4">
-                    <a href="">></a>
+                <div class="divImg3 slide">
+                    <img src="./assets/images/accueil/Pantherhome_slider_3.png" alt="Shuri" id="divImg3">
+                    <button id="nextSlide">></button>
                 </div>
             </div>
         </section>
@@ -197,7 +198,7 @@
                 <!-- Partie droite -->
                 <div class="part-right">
                     <div class="tchalla">
-                        <img src="./assets/images/accueil/Pantherhome5.png" alt="T'T’Challa">
+                        <img src="./assets/images/accueil/Pantherhome5.png" alt="T'Challa" id="tchalla">
                         <h3>T’Challa</h3>
                         <div class="btn-group">
                             <button>Black Panther</button>
@@ -216,7 +217,7 @@
                     </div>
 
                     <div class="pantherhome6">
-                        <img src="./assets/images/accueil/Pantherhome6.png" alt="Pantherhome6">
+                        <img src="./assets/images/accueil/Pantherhome6.png" alt="Pantherhome6" id="pantherhome6">
                     </div>
                 </div>
             </div>
@@ -285,5 +286,6 @@
     </div>
     
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/accueil.js"></script>
 </body>
 </html>
