@@ -130,7 +130,7 @@ input::placeholder {
     font-family: cantarell;
 }
 
-form button, .popup1 button{
+form button, .popup1 button, .popup2 button{
     width: 10vw;
     padding: 2.5% 2.5%;
     border-radius: 38px;
@@ -192,7 +192,7 @@ button[type='submit']:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.popup-content {
+.popup-content, .popup-content2 {
     background: linear-gradient(to bottom, #f2cef2a8 10%, var(--purple-color2) 90%);
     box-shadow: 0px 0px 5em 5em var(--purple-color2);
     margin: 15% auto;
@@ -206,13 +206,34 @@ button[type='submit']:hover {
     
 }
 
-.popup1 h2{
+.popup1 h2, .popup2 h2{
     color: white;
     font-family: cantarell;
     font-size: 1.5em;
     text-transform: uppercase;
 }
 
-.popup1 button {
+.popup1 button, .popup2 button {
     width: auto;
+}
+
+.popup2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 0.99; 
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#figma {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    margin: 0 auto;
 }

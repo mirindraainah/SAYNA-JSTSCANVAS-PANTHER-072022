@@ -27,31 +27,38 @@ let enigmes = [{
 }
 ];
 
-let send = document.getElementById('send');
-let result = document.getElementById('result');
-let num = document.getElementById('num');
-let popup = document.querySelector(".popup1");
-let popupTitle = document.getElementById('popup-title');
-let message = document.getElementById('message');
-let text = document.querySelector(".p2");
-let enigme = document.getElementById('enigme');
-let titre = document.getElementById('titre');
-let note = document.querySelector(".pantherenigme2-text2");
-let response = document.getElementById('rep');
+let send = document.getElementById('send'); //bouton envoyer
+let result = document.getElementById('result'); //formulaire
+let num = document.getElementById('num'); //numéro de l'énigme
+let popup = document.querySelector(".popup1"); //popup
+let popupTitle = document.getElementById('popup-title'); //titre du popup
+let message = document.getElementById('message'); //message du popup
+let text = document.querySelector(".p2"); //description de l'énigme
+let enigme = document.getElementById('enigme'); //énigme
+let titre = document.getElementById('titre'); //titre de la note à droite
+let note = document.querySelector(".pantherenigme2-text2"); //note à droite
+let response = document.getElementById('rep'); //réponse (input)
 
 let currentIndex = 0;
-let status = document.querySelector("#status");
+let status = document.querySelector("#status"); //bouton dans le popup
 
+let popup2 = document.querySelector(".popup2"); //popup à la fin de l'énigme si la réponse a été correcte
+let status2 = document.querySelector("#status2"); //bouton dans le popup fin du quizz
+
+// actions lors de l'envoi de la réponse
 result.addEventListener('submit', (event) => {
   event.preventDefault();
   
   if (currentIndex < enigmes.length) {
+
+    // Vérifions que la réponse est correcte
     if (response.value.toLowerCase().trim() === enigmes[currentIndex].reponse.toLowerCase().trim()) {
       popupTitle.innerHTML = 'Bravo !';
-      message.innerHTML = 'Tu as trouvé la réponse ! Es-tu prêt pour l\'énigme suivante ?';
-      status.innerHTML = "Question suivante";
+      message.innerHTML = 'Tu as trouvé la réponse ! <br> Es-tu prêt pour l\'énigme suivante ?';
+      status.innerHTML = "QUESTION SUIVANTE";
       popup.style.display = "block";
       
+    //   modifications du contenu
       text.innerHTML = enigmes[currentIndex].text;
       enigme.style.fontSize = '1em';
       enigme.style.fontFamily = 'cantarell';
@@ -61,19 +68,24 @@ result.addEventListener('submit', (event) => {
       note.innerHTML = enigmes[currentIndex].note;
       num.innerText = currentIndex + 1;
       
+    //   conditions pour les popups
       if (currentIndex < enigmes.length - 1) {
         status.removeEventListener('click', restartQuiz);
         status.addEventListener('click', showNextQuestion);
       } else {
-        status.removeEventListener('click', showNextQuestion);
-        status.addEventListener('click', restartQuiz);
+        if (response.value.toLowerCase().trim() === enigmes[currentIndex].reponse.toLowerCase().trim()) {
+            popup2.style.display = "block";
+            popup.style.display = "none";
+           
+            status2.addEventListener('click', revenirAccueil);
+        }
       }
       
       response.value = ""; // Effacer le contenu de l'input
       
     } else {
       popupTitle.innerHTML = 'Zut !';
-      message.innerHTML = 'Mauvaise réponse ! Réfléchissez encore.';
+      message.innerHTML = 'Ce n\'est pas la bonne réponse ! Tentez encore.';
       status.innerHTML = "RECOMMENCER";
       popup.style.display = "block";
       status.removeEventListener('click', showNextQuestion);
@@ -82,12 +94,16 @@ result.addEventListener('submit', (event) => {
   }
 });
 
+status.addEventListener('click', showNextQuestion);
+
+// fonctions utilisées
+
 function showNextQuestion() {
   currentIndex++;
-  
+
   if (currentIndex < enigmes.length) {
     popup.style.display = "none"; // Cacher le popup
-    
+
     text.innerHTML = enigmes[currentIndex].text;
     enigme.style.fontSize = '1em';
     enigme.style.fontFamily = 'cantarell';
@@ -96,15 +112,10 @@ function showNextQuestion() {
     titre.innerHTML = enigmes[currentIndex].titre;
     note.innerHTML = enigmes[currentIndex].note;
     num.innerText = currentIndex + 1;
-    
-    if (currentIndex === enigmes.length - 1) {
-      status.innerHTML = "Recommencer";
-      status.removeEventListener('click', showNextQuestion);
-      status.addEventListener('click', restartQuiz);
-    }
-    
+
     response.value = ""; // Effacer le contenu de l'input
   }
+
 }
 
 function restartQuiz() {
@@ -112,8 +123,44 @@ function restartQuiz() {
   response.value = ""; // Effacer le contenu de l'input
 }
 
-status.addEventListener('click', showNextQuestion);
+function revenirAccueil() {
+  location.reload();
+  window.location.href = 'index.html';
+}
 
 
+// MINUTEUR
+// Récupérer l'élément <span> du minuteur
+const minuteurElement = document.getElementById('minuteur');
 
- 
+// Définir le temps initial du minuteur (24 heures)
+let tempsRestant = 86400;
+
+// Fonction pour mettre à jour le minuteur
+function mettreAJourMinuteur() {
+  // Calculer les heures, minutes et secondes restantes
+  const heures = Math.floor(tempsRestant / 3600);
+  const minutes = Math.floor((tempsRestant % 3600) / 60);
+  const secondes = tempsRestant % 60;
+  
+  // Afficher le temps restant dans le format hh:mm:ss
+  minuteurElement.textContent = `${heures.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secondes.toString().padStart(2, '0')}`;
+
+  // Vérifier si le temps restant est écoulé
+  if (tempsRestant === 0) {
+    // Redirection vers l'accueil
+    window.location.href = 'index.html';
+  } else {
+    // Décrémenter le temps restant d'une seconde
+    tempsRestant--;
+  }
+}
+
+// Appeler la fonction de mise à jour du minuteur toutes les secondes
+const interval = setInterval(mettreAJourMinuteur, 1000);
+
+// Exécuter la redirection lorsque le minuteur atteint 0
+setTimeout(() => {
+  clearInterval(interval);
+  window.location.href = 'nom-de-la-page.html';
+}, 86400000); // 24 heures (86 400 000 millisecondes)
