@@ -24,3 +24,4 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
   modal.style.display = "block";
 });
+

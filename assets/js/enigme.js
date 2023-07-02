@@ -27,28 +27,93 @@ let enigmes = [{
 }
 ];
 
-// 
-let send = document.getElementById('send'); //bouton
-let result = document.getElementById('result'); //formulaire
-let num = document.getElementById('num'); //numéro de l'énigme
-let popup = document.querySelector(".popup1"); //popup 1
+let send = document.getElementById('send');
+let result = document.getElementById('result');
+let num = document.getElementById('num');
+let popup = document.querySelector(".popup1");
 let popupTitle = document.getElementById('popup-title');
-let message = document.getElementById('message'); //message dans le popup
+let message = document.getElementById('message');
+let text = document.querySelector(".p2");
+let enigme = document.getElementById('enigme');
+let titre = document.getElementById('titre');
+let note = document.querySelector(".pantherenigme2-text2");
+let response = document.getElementById('rep');
 
-
-let response = document.getElementById('rep').value.toLowerCase().trim();
-
-let i=1; 
+let currentIndex = 0;
+let status = document.querySelector("#status");
 
 result.addEventListener('submit', (event) => {
-    event.preventDefault();
-    i++;
-    num.innerText = i;
-    for(let currentIndex = 0; currentIndex<3; currentIndex++){
-        if(response == enigmes[currentIndex].reponse.toLowerCase().trim()){
-            popup.style.display = "block";
-        }
+  event.preventDefault();
+  
+  if (currentIndex < enigmes.length) {
+    if (response.value.toLowerCase().trim() === enigmes[currentIndex].reponse.toLowerCase().trim()) {
+      popupTitle.innerHTML = 'Bravo !';
+      message.innerHTML = 'Tu as trouvé la réponse ! Es-tu prêt pour l\'énigme suivante ?';
+      status.innerHTML = "Question suivante";
+      popup.style.display = "block";
+      
+      text.innerHTML = enigmes[currentIndex].text;
+      enigme.style.fontSize = '1em';
+      enigme.style.fontFamily = 'cantarell';
+      enigme.style.wordSpacing = '0.5em';
+      enigme.innerHTML = enigmes[currentIndex].enigme;
+      titre.innerHTML = enigmes[currentIndex].titre;
+      note.innerHTML = enigmes[currentIndex].note;
+      num.innerText = currentIndex + 1;
+      
+      if (currentIndex < enigmes.length - 1) {
+        status.removeEventListener('click', restartQuiz);
+        status.addEventListener('click', showNextQuestion);
+      } else {
+        status.removeEventListener('click', showNextQuestion);
+        status.addEventListener('click', restartQuiz);
+      }
+      
+      response.value = ""; // Effacer le contenu de l'input
+      
+    } else {
+      popupTitle.innerHTML = 'Zut !';
+      message.innerHTML = 'Mauvaise réponse ! Réfléchissez encore.';
+      status.innerHTML = "RECOMMENCER";
+      popup.style.display = "block";
+      status.removeEventListener('click', showNextQuestion);
+      status.addEventListener('click', restartQuiz);
     }
-
-
+  }
 });
+
+function showNextQuestion() {
+  currentIndex++;
+  
+  if (currentIndex < enigmes.length) {
+    popup.style.display = "none"; // Cacher le popup
+    
+    text.innerHTML = enigmes[currentIndex].text;
+    enigme.style.fontSize = '1em';
+    enigme.style.fontFamily = 'cantarell';
+    enigme.style.wordSpacing = '0.5em';
+    enigme.innerHTML = enigmes[currentIndex].enigme;
+    titre.innerHTML = enigmes[currentIndex].titre;
+    note.innerHTML = enigmes[currentIndex].note;
+    num.innerText = currentIndex + 1;
+    
+    if (currentIndex === enigmes.length - 1) {
+      status.innerHTML = "Recommencer";
+      status.removeEventListener('click', showNextQuestion);
+      status.addEventListener('click', restartQuiz);
+    }
+    
+    response.value = ""; // Effacer le contenu de l'input
+  }
+}
+
+function restartQuiz() {
+  popup.style.display = "none";
+  response.value = ""; // Effacer le contenu de l'input
+}
+
+status.addEventListener('click', showNextQuestion);
+
+
+
+ 
