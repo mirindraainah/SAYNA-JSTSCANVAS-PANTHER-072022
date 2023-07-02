@@ -135,6 +135,7 @@
     font-weight: bold;
     font-size: 1em;
     color: white;
+    z-index: 1;
 }
 
 .second-section .persona .divImg3 img {
@@ -146,7 +147,16 @@
     opacity: 0;
     transition: opacity 1s ease-in-out;
 } */
+
   
+  
+  
+  
+#canvas {
+    position: absolute;
+    display: none; /* Masquer le canvas initialement */
+    pointer-events: none; /* Empêcher les interactions avec le canvas */
+}
 
 /************************ TROISIEME SECTION *****************************/
 .third-section {

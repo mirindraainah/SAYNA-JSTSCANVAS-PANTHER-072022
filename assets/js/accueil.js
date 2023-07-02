@@ -1,5 +1,3 @@
-
-
 // zoomer images
 $("#tchalla").on({
     mouseenter: function() {
@@ -93,20 +91,6 @@ let personnages = [
     }
 ];
 
-// let nextSlide = document.getElementById('nextSlide');
-// let divImg1 = document.getElementById("divImg1");
-
-// nextSlide.addEventListener('click', ()=>{
-
-
-// for(let i=0; i<=personnages.length; i++){
-//     divImg1.setAttribute('src', personnages[i].image.src);
-// }
-
- 
-// });
-//   $('.title').html(personnages[0].title);
-
 let nextSlide = document.getElementById('nextSlide'); //bouton suivant
 
 let divImg1 = document.getElementById('divImg1'); 
@@ -132,5 +116,55 @@ nextSlide.addEventListener('click', () => {
     divTitle2.innerHTML = personnages[(currentIndex+ 1) % personnages.length].title;
     currentIndex = (currentIndex + 1) % personnages.length;
 
-    // animation 
+    // animation
+   
+});
+
+
+
+// canvas
+// Récupérer le bouton et le canvas
+const button = document.getElementById('nextSlide');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Définir la taille du canvas
+canvas.width = button.offsetWidth; // Ajouter une marge pour le décalage
+canvas.height = button.offsetHeight; // Ajouter une marge pour le décalage
+
+// Définir le style du canvas
+canvas.style.top = button.offsetTop + 40 + 'px';
+canvas.style.left = (button.offsetLeft + button.offsetWidth - canvas.width - 40) + 'px';
+
+// Copier le style du bouton sur le canvas
+canvas.style.backgroundColor = getComputedStyle(button).backgroundColor;
+canvas.style.borderRadius = getComputedStyle(button).borderRadius;
+canvas.style.zIndex = getComputedStyle(button).zIndex;
+
+// Dessiner le bouton sur le canvas
+function drawButton() {
+  const computedStyle = getComputedStyle(button);
+
+  ctx.fillStyle = computedStyle.backgroundColor;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.font = computedStyle.fontStyle + ' ' + computedStyle.fontWeight + ' ' + computedStyle.fontSize + ' ' + computedStyle.fontFamily;
+  ctx.fillStyle = computedStyle.color;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(button.innerText, canvas.width / 2, canvas.height / 2);
+}
+
+// Gérer l'affichage du canvas lors du passage de la souris
+button.addEventListener('mouseenter', function() {
+  // Afficher le canvas en tant que copie conforme du bouton
+  canvas.style.display = 'block';
+
+  // Dessiner le bouton sur le canvas
+  drawButton();
+});
+
+button.addEventListener('mouseleave', function() {
+  // Masquer le canvas
+  canvas.style.display = 'none';
 });
