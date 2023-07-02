@@ -44,10 +44,10 @@
                 <img src="assets/images/Enigme/Pantherenigme1.png" alt="Pantherenigme1">
             </div>
             <div class="right">
-                <h1>Releve le defi <br>des dora milaje</h1>
+                <h1 class="fade-in">Releve le defi <br>des dora milaje</h1>
                 <div class="pantherenigme2">
                     <img src="assets/images/Enigme/Pantherenigme2.png" alt="Pantherenigme2">
-                    <div class="pantherenigme2-text">
+                    <div class="pantherenigme2-text fade-in">
                         <p>Les Dora Milaje sont de farouches guerrières d’élite. Elles constituent la garde 
                             rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la 
                             vie. Leur Générale, Okoyé est également la dirigeante des forces armées et des 
@@ -66,20 +66,20 @@
         </section>
 
         <!------------------- Deuxième section ---------------->
-        <section class="second-section">
+        <section class="second-section fade-in">
 
             <!-- partie gauche -->
             <div class="left2">
-                <div class="enigme-desc">
+                <div class="enigme-desc fade-in">
                     <h2 class="num-enigme">ENIGME NUMERO <span id="num" style="font-family: Arial, Helvetica, sans-serif;">1</span></h2>
                     <p class="p2">Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais, 
                         et apprend par la même occasion la première valeur d’une Dora Milaje !</p>
                 </div>
-                <div class="words">
+                <div class="words v">
                     <h2 id="enigme">“ SI JE SUIS FIDELE C’EST A CE TRONE <br>
                         PEU IMPORTE QUI MONTE DESSUS ”</h2>
                 </div>
-                <div class="formulaire">
+                <div class="formulaire fade-in">
                     <p class="p1">Alors, as tu la réponse </p>
                     <form action="" id="result">
                         <input type="text" name="response" id="rep" placeholder="Réponse" required>
@@ -91,7 +91,7 @@
             <!-- partie droite -->
             <div class="right2">
                 <img src="assets/images/Enigme/Pantherenigme2.png" alt="Pantherenigme2">
-                <div class="pantherenigme2-text2">
+                <div class="pantherenigme2-text2 fade-in">
                     <p id="titre">Voici la transicription de l’alphabet: </p>
                     <p id="alphabet"><span>A</span> = A ; <span>B</span> = b ; <span>C</span> = c ; <span>D</span> = d ; <span>E</span> = e ; <span>F</span> = f ; <span>G</span> = g ; <span>H</span> = h ; <span>I</span> = i ; <span>J</span> = j ; 
 
@@ -157,7 +157,11 @@
            
         </div>
     </div>
-   
+
+    <!-- canvas -->
+    <canvas id="canvas-mouse"></canvas>
+
+    <script src="./assets/js/script.js"></script>
     <script src="./assets/js/enigme.js"></script>
 </body>
 </html>

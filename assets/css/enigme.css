@@ -156,6 +156,8 @@ button[type='submit']:hover {
 
 .right2 img {
     width: 40vw;
+    transform: scaleX(-1);
+    margin-top: 7%;
 }
 
 .right2 .pantherenigme2-text2 {

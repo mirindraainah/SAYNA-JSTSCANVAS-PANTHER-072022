@@ -70,9 +70,11 @@
     <main>
         <!-------------------- Première section ------------------------->
         <section class="first-section">
-            <div class="bp">
-                <h1>BLACK PANTHER</h1> 
-                <h2>WAKANDA FOREVER</h2>
+            <div class="bp fade-in">
+                <div class="zoom">
+                    <h1>BLACK PANTHER</h1> 
+                    <h2>WAKANDA FOREVER</h2>
+                </div>   
                 <p>En plus d'être un film qui fait la part belle aux héroïnes, Black Panther rend 
                     hommage aux cultures africaine et afro américaine. On y évoque le 
                     racisme, la colonisation et les violences contre les afro américains. 
@@ -87,14 +89,14 @@
         </section>
 
         <!-------------------- Deuxième section ------------------------->
-        <section class="second-section">
+        <section class="second-section fade-in">
             <div></div>
             <div class="persona" id="myDiv">
                 <div class="divImg1 slide">
                     <img src="./assets/images/Accueil/Pantherhome_slider_1.png" alt="Killmonger" id="divImg1">
                 </div>
                 <div class="div1 slide slides">
-                    <h2 class="title" id="divTitle1">KILLMONGER</h2>
+                    <h2 class="title zoom" id="divTitle1">KILLMONGER</h2>
                     <p class="bio">
                         La sauvagerie de N'Jadaka alors qu'il servait dans une unité d'opérations noires de l'armée américaine lui a valu le surnom de Killmonger. D’origine Wakandaise, et se sentant abandoné par sa nation, il cherche à détroner T’Challa dans une quête vers le pourvoir.
                     </p>
@@ -104,7 +106,7 @@
                     <img src="./assets/images/accueil/Pantherhome_slider_2.png" alt="Okoye" id="divImg2" class=" slide-to-animate">
                 </div>
                 <div class="div2 slide slides">
-                    <h2 class="title" id="divTitle2">OKOYE</h2>
+                    <h2 class="title zoom" id="divTitle2">OKOYE</h2>
                     <p class="bio">
                         Okoye est le général des Dora Milaje (groupe d’élite de femmes guerrières) et le chef des forces armées et des renseignements wakandais. Témoin du couronnement de T'Challa, elle se joint à lui dans de nombreuses aventures
                     </p>
@@ -120,7 +122,7 @@
         </section>
 
         <!-------------------- Troisième section ------------------------->
-        <section class="third-section">
+        <section class="third-section fade-in">
             <div class="content">
                 <!-- Partie gauche -->
                 <div class="part-left">
@@ -200,7 +202,7 @@
                 <!-- Partie droite -->
                 <div class="part-right">
                     <div class="tchalla">
-                        <img src="./assets/images/accueil/Pantherhome5.png" alt="T'Challa" id="tchalla">
+                        <img src="./assets/images/accueil/Pantherhome5.png" alt="T'Challa" class="zoom">
                         <h3>T’Challa</h3>
                         <div class="btn-group">
                             <button>Black Panther</button>
@@ -219,14 +221,14 @@
                     </div>
 
                     <div class="pantherhome6">
-                        <img src="./assets/images/accueil/Pantherhome6.png" alt="Pantherhome6" id="pantherhome6">
+                        <img src="./assets/images/accueil/Pantherhome6.png" alt="Pantherhome6" class="zoom">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-------------------- Quatrième section (formulaire) -------------------->
-        <section class="fourth-section">
+        <section class="fourth-section fade-in">
             <div class="formulaire">
                 <p>Besoin de l’intervention du Wakanda ?</p>
                 <h2>Contactez nous !</h2>          
@@ -239,7 +241,7 @@
             </div>
         </section>
 
-        <!-------------------- Quatrième section (formulaire) -------------------->
+        <!-------------------- cercle bleu -------------------->
         <section class="fifth-section">
             <svg>
                 <circle cx="50" cy="50" r="3.5vw" stroke-width="3" fill="#021740"/>
@@ -286,7 +288,10 @@
             <p>Merci, à la prochaine!</p>
         </div>
     </div>
-    
+
+    <!-- canvas -->
+    <canvas id="canvas-mouse"></canvas>
+
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/accueil.js"></script>
 </body>

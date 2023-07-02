@@ -1,23 +1,40 @@
 // zoomer images
-$("#tchalla").on({
-    mouseenter: function() {
-        $(this).animate({ width: '+=10%', });
-    },
-    mouseleave: function() {
-        $(this).animate({ width: '-=10%', });
-    },
+const elements = document.querySelectorAll('.zoom');
+
+elements.forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+    // Modifie la taille de l'élément au passage de la souris
+    element.style.transform = 'scale(1.1)';
+  });
+
+  // Réinitialise la taille de l'élément lorsque la souris quitte l'élément
+  element.addEventListener('mouseout', function() {
+    element.style.transform = 'scale(1)';
+  });
 });
 
-$("#pantherhome6").on({
-    mouseenter: function() {
-        $(this).animate({ width: '+=20%', });
-    },
-    mouseleave: function() {
-        $(this).animate({ width: '-=20%', });
-    },
+// entrée des deux lignes et les logos
+window.addEventListener('load', function() {
+  var leftDiv = document.querySelector('.left');
+  leftDiv.style.opacity = 0; // Définir l'opacité initiale à 0
+  leftDiv.style.transform = 'translateY(50px)'; // Déplacer l'élément vers le haut de 50 pixels
+
+  var opacity = 0;
+  var translateY = -100;
+  var interval = setInterval(function() {
+      opacity += 0.05; // Augmenter progressivement l'opacité
+      translateY += 5; // Déplacer progressivement l'élément vers le bas
+
+      leftDiv.style.opacity = opacity;
+      leftDiv.style.transform = 'translateY(' + translateY + 'px)';
+
+      if (opacity >= 1) {
+          clearInterval(interval); // Arrêter l'animation une fois que l'opacité atteint 1
+      }
+  }, 50); 
 });
 
-// personnages
+//défilement des personnages
 let personnages = [
     {
       'image': {
@@ -120,8 +137,6 @@ nextSlide.addEventListener('click', () => {
    
 });
 
-
-
 // canvas
 // Récupérer le bouton et le canvas
 const button = document.getElementById('nextSlide');
@@ -168,3 +183,5 @@ button.addEventListener('mouseleave', function() {
   // Masquer le canvas
   canvas.style.display = 'none';
 });
+
+

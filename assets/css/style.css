@@ -224,10 +224,10 @@ footer .footer-left:hover, footer div ul li:hover{
 }
 
 /* entrée de certains éléments */
-/* section * {
+.fade-in {
     animation-name: fade-in;
     animation-duration: 5s;
-} */
+}
 
 @keyframes fade-in {
     from {
@@ -274,4 +274,18 @@ cursor: pointer;
 .close:focus {
 color: var(--white-color);
 text-decoration: none;
+}
+
+/* canvas souris */
+#canvas-mouse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+  
+/* pour chaque élément zoomé */
+.zoom {
+    transition: transform 3s; 
 }
